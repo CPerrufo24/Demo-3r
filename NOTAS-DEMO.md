@@ -66,9 +66,13 @@ El sidebar y navbar usaban anchos fijos y no se adaptaban a pantalla dividida. A
 | Login | Pantalla real, sin autenticación real detrás |
 | Publicar en portales (EasyBroker, MercadoLibre) | **No construido aún** — se discutió pero no se implementó |
 
-## Puntos pendientes para cerrar la demo con el cliente
+## Si sobra tiempo antes de la reunión (opcional, no bloqueante)
 
-En orden sugerido de prioridad (de "prueba de concepto" a "producto real"):
+- **Anillo de progreso para el Lead Score** — hoy es una píldora plana con `%`; se podría convertir en un anillo SVG (mismo patrón que `MarketHealthRadar.tsx`) para que se sienta tan custom como el radar de mercado. No se hizo todavía porque no era tan urgente como arreglar la jerarquía del Morning Brief y el rebrand.
+
+## Roadmap — para DESPUÉS de la reunión, no antes
+
+Nada de esto se toca antes de la reunión de mañana; son los siguientes pasos si 3R Connect avanza con la propuesta. En orden sugerido de prioridad (de "prueba de concepto" a "producto real"):
 
 1. **Persistencia real** — conectar el backend Express a la base Postgres que ya existe en Docker (hoy todo vive en memoria del navegador).
 2. **Integración real con al menos un sistema** — buen candidato: EasyBroker, porque tiene API pública documentada. Empezar por lectura (traer propiedades reales) antes que escritura.
@@ -77,6 +81,7 @@ En orden sugerido de prioridad (de "prueba de concepto" a "producto real"):
 5. **Roles y permisos de equipo** — vista de administrador/multiagente (hoy todo es de un solo usuario implícito).
 6. **Publicar en portales** — botón de "Publicar en EasyBroker / MercadoLibre" desde Propiedades (simulado primero, real después si EasyBroker lo permite).
 7. **Traducción completa** — las respuestas de IA y los datos de ejemplo hoy solo están en español; si se necesita inglés real para otro cliente, falta poblar esas cadenas.
+8. **Refresh visual al resto de pantallas** — Fraunces/motion solo se aplicaron al Overview esta noche por control de riesgo; si el proyecto avanza, vale la pena extender la misma identidad (tipografía, micro-interacciones) a Pipeline, Propiedades, Clientes y Reportes.
 
 ## Deploy en Vercel (demo en vivo para la reunión)
 
