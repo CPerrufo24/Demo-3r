@@ -1,6 +1,14 @@
 # EstatePro CRM — Notas de la Demo
 
-Resumen de lo construido para la segunda reunión con el cliente (posiblemente **viernes**, hora por confirmar) y los puntos pendientes para cerrar la propuesta.
+Resumen de lo construido para la segunda reunión con el cliente (**mañana 4pm**) y los puntos pendientes para cerrar la propuesta.
+
+## Refresh de última hora (previo a la reunión)
+
+- **Rebrand**: se quitó "Elite Realty Group" (placeholder heredado del export de AI Studio) y ahora todo dice **3R Connect** — sidebar, navbar, login, narrativa de Reportes y el system prompt de la IA.
+- **El Overview ahora SÍ es el Morning Brief del pitch**: antes la pantalla principal abría con 4 tarjetas de métricas genéricas (24 Leads / 12 Appointments / 156 Listings / 4.2% Conversión) — exactamente el patrón que la narrativa del pitch dice que se descartó — y las tarjetas de acción (compradores listos, ajuste de precio, leads sin contactar, listing en riesgo) quedaban abajo, secundarias. Se invirtió la jerarquía: las tarjetas de acción son ahora el contenido principal arriba, y las métricas bajaron a una franja compacta secundaria. Si en la reunión abren el Overview esperando ver el "Morning Brief" que se les va a explicar, ahora sí es lo primero que ven.
+- **Tipografía propia**: se agregó Fraunces (serif con carácter) para el título del Morning Brief y el wordmark "EstatePro CRM" — el resto de la UI se queda en Inter a propósito, para no arriesgar el resto de pantallas la noche antes de la reunión.
+- **Motion**: las 4 tarjetas de acción del Morning Brief ahora entran con una animación escalonada (usaba la librería `motion` que ya estaba instalada pero sin usar en ningún lado).
+- **Vercel Authentication desactivada**: el proyecto tenía activada por defecto la protección SSO de Vercel (pedía login con cuenta de Vercel antes incluso de llegar a nuestro propio gate de usuario/contraseña) — se desactivó porque duplicaba el gate y hubiera bloqueado a alguien de 3R Connect sin cuenta de Vercel.
 
 ## Cómo levantar la demo
 
