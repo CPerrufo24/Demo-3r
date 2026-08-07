@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display-face: 'Fraunces', Georgia, serif;
   --color-primary: #1e3a8a;
   --color-on-primary: #ffffff;
   --color-primary-container: #dbeafe;
@@ -74,7 +75,7 @@
   /* font-label-md, font-headline-md, etc. are used as font-family
      utilities alongside the text-* size utilities above — alias them to
      the same Inter stack so the utility exists instead of being a no-op. */
-  --font-display: var(--font-sans);
+  --font-display: var(--font-display-face);
   --font-label-sm: var(--font-sans);
   --font-label-md: var(--font-sans);
   --font-body-md: var(--font-sans);

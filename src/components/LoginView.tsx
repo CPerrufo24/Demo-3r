@@ -30,7 +30,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
           <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm mx-auto mb-4">
             <span className="material-symbols-outlined text-[24px]">real_estate_agent</span>
           </div>
-          <h1 className="font-headline-md text-headline-md font-bold text-primary tracking-tight">EstatePro CRM</h1>
+          <h1 className="font-display text-headline-md font-bold text-primary tracking-tight">EstatePro CRM</h1>
           <p className="text-xs text-secondary mt-1">{t('sidebar.tagline')}</p>
         </div>
 

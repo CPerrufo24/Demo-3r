@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { ViewMode, ActivityItem, InsightCard } from '../types';
 import { MOCK_INSIGHTS, MOCK_ACTIVITIES } from '../data/mockData';
 import { useLanguage } from '../lib/i18n.tsx';
@@ -60,103 +61,11 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
         </div>
       </div>
 
-      {/* Metric Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
-        {/* Metric 1 */}
-        <div
-          onClick={() => onSelectView('pipeline')}
-          className="bg-surface-container-lowest/90 p-md rounded-xl border border-outline-variant/60 hover:border-primary/40 transition-all duration-200 cursor-pointer shadow-xs hover:shadow-sm group"
-        >
-          <div className="flex justify-between items-start mb-sm">
-            <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider group-hover:text-primary transition-colors">
-              {t('overview.metricLeads')}
-            </p>
-            <span className="material-symbols-outlined text-secondary text-[20px] group-hover:text-primary transition-colors">
-              person_add
-            </span>
-          </div>
-          <div className="flex items-baseline gap-sm">
-            <h3 className="font-headline-md text-[28px] font-bold text-on-surface">24</h3>
-            <span className="font-label-sm text-label-sm text-[#16a34a] flex items-center font-semibold bg-[#dcfce7] px-1.5 py-0.5 rounded-full">
-              <span className="material-symbols-outlined text-[14px]">arrow_upward</span> 12%
-            </span>
-          </div>
-          <p className="font-body-md text-body-md text-secondary mt-xs text-xs">{t('overview.vsYesterday')}</p>
-        </div>
-
-        {/* Metric 2 */}
-        <div
-          onClick={() => alert(t('overview.appointmentsAlert'))}
-          className="bg-surface-container-lowest/90 p-md rounded-xl border border-outline-variant/60 hover:border-primary/40 transition-all duration-200 cursor-pointer shadow-xs hover:shadow-sm group"
-        >
-          <div className="flex justify-between items-start mb-sm">
-            <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider group-hover:text-primary transition-colors">
-              {t('overview.metricAppointments')}
-            </p>
-            <span className="material-symbols-outlined text-secondary text-[20px] group-hover:text-primary transition-colors">
-              event
-            </span>
-          </div>
-          <div className="flex items-baseline gap-sm">
-            <h3 className="font-headline-md text-[28px] font-bold text-on-surface">12</h3>
-            <span className="font-label-sm text-label-sm text-[#16a34a] flex items-center font-semibold bg-[#dcfce7] px-1.5 py-0.5 rounded-full">
-              <span className="material-symbols-outlined text-[14px]">arrow_upward</span> 3%
-            </span>
-          </div>
-          <p className="font-body-md text-body-md text-secondary mt-xs text-xs">{t('overview.scheduledThisWeek')}</p>
-        </div>
-
-        {/* Metric 3 */}
-        <div
-          onClick={() => onSelectView('listings')}
-          className="bg-surface-container-lowest/90 p-md rounded-xl border border-outline-variant/60 hover:border-primary/40 transition-all duration-200 cursor-pointer shadow-xs hover:shadow-sm relative overflow-hidden group"
-        >
-          <div className="flex justify-between items-start mb-sm relative z-10">
-            <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider group-hover:text-primary transition-colors">
-              {t('overview.metricActiveListings')}
-            </p>
-            <span className="material-symbols-outlined text-secondary text-[20px] group-hover:text-primary transition-colors">
-              real_estate_agent
-            </span>
-          </div>
-          <div className="flex items-baseline gap-sm relative z-10">
-            <h3 className="font-headline-md text-[28px] font-bold text-on-surface">156</h3>
-          </div>
-          <p className="font-body-md text-body-md text-secondary mt-xs text-xs relative z-10 font-medium">
-            {t('overview.totalPortfolioValue')} <span className="text-primary font-bold">$45.2M</span>
-          </p>
-        </div>
-
-        {/* Metric 4 */}
-        <div
-          onClick={() => onSelectView('reports')}
-          className="bg-surface-container-lowest/90 p-md rounded-xl border border-outline-variant/60 hover:border-primary/40 transition-all duration-200 cursor-pointer shadow-xs hover:shadow-sm group"
-        >
-          <div className="flex justify-between items-start mb-sm">
-            <div className="flex items-center gap-xs">
-              <p className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider group-hover:text-primary transition-colors">
-                {t('overview.metricConversion')}
-              </p>
-            </div>
-            <span className="material-symbols-outlined text-secondary text-[20px] group-hover:text-primary transition-colors">
-              pie_chart
-            </span>
-          </div>
-          <div className="flex items-baseline gap-sm">
-            <h3 className="font-headline-md text-[28px] font-bold text-on-surface">4.2%</h3>
-            <span className="font-label-sm text-label-sm text-error flex items-center font-semibold bg-error-container/60 px-1.5 py-0.5 rounded-full">
-              <span className="material-symbols-outlined text-[14px]">arrow_downward</span> 0.5%
-            </span>
-          </div>
-          <p className="font-body-md text-body-md text-secondary mt-xs text-xs">{t('overview.leadToCloseRatio')}</p>
-        </div>
-      </div>
-
-      {/* Bento Grid Layout for Insights and Activity Feed */}
+      {/* Bento Grid Layout for Insights and Activity Feed — the actions ARE the dashboard */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-md items-stretch">
         {/* Actionable Insights Area (Spans 2 columns) */}
         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-md min-h-[420px]">
-          {MOCK_INSIGHTS.map((insight) => {
+          {MOCK_INSIGHTS.map((insight, index) => {
             const isError = insight.theme === 'error';
             const isTertiary = insight.theme === 'tertiary';
 
@@ -179,10 +88,14 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
               : 'text-primary group-hover:text-primary-container';
 
             return (
-              <div
+              <motion.div
                 key={insight.id}
                 onClick={() => handleInsightClick(insight)}
-                className={`bg-surface-container-lowest rounded-xl border border-outline-variant shadow-xs p-lg flex flex-col justify-between transition-all duration-200 cursor-pointer group hover:shadow-md ${borderColor}`}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: index * 0.08, ease: 'easeOut' }}
+                whileHover={{ y: -2 }}
+                className={`bg-surface-container-lowest rounded-xl border border-outline-variant shadow-xs p-lg flex flex-col justify-between transition-shadow duration-200 cursor-pointer group hover:shadow-md ${borderColor}`}
               >
                 <div>
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-md group-hover:scale-105 transition-transform ${badgeBg}`}>
@@ -203,7 +116,7 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
                     arrow_forward
                   </span>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
@@ -293,6 +206,38 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
             })}
           </div>
         </div>
+      </div>
+
+      {/* Slim metrics strip — the underlying numbers, kept secondary to the actions above */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-outline-variant rounded-xl border border-outline-variant bg-surface-container-lowest/60">
+        <button
+          onClick={() => onSelectView('pipeline')}
+          className="p-sm sm:p-md text-left hover:bg-surface-container-low/60 transition-colors cursor-pointer"
+        >
+          <p className="font-label-sm text-label-sm text-outline uppercase tracking-wider">{t('overview.metricLeads')}</p>
+          <p className="mt-0.5"><span className="font-headline-md text-[20px] font-bold text-on-surface">24</span> <span className="text-[11px] font-semibold text-[#16a34a]">↑12%</span></p>
+        </button>
+        <button
+          onClick={() => alert(t('overview.appointmentsAlert'))}
+          className="p-sm sm:p-md text-left hover:bg-surface-container-low/60 transition-colors cursor-pointer"
+        >
+          <p className="font-label-sm text-label-sm text-outline uppercase tracking-wider">{t('overview.metricAppointments')}</p>
+          <p className="mt-0.5"><span className="font-headline-md text-[20px] font-bold text-on-surface">12</span> <span className="text-[11px] font-semibold text-[#16a34a]">↑3%</span></p>
+        </button>
+        <button
+          onClick={() => onSelectView('listings')}
+          className="p-sm sm:p-md text-left hover:bg-surface-container-low/60 transition-colors cursor-pointer"
+        >
+          <p className="font-label-sm text-label-sm text-outline uppercase tracking-wider">{t('overview.metricActiveListings')}</p>
+          <p className="mt-0.5"><span className="font-headline-md text-[20px] font-bold text-on-surface">156</span> <span className="text-[11px] text-secondary">· $45.2M</span></p>
+        </button>
+        <button
+          onClick={() => onSelectView('reports')}
+          className="p-sm sm:p-md text-left hover:bg-surface-container-low/60 transition-colors cursor-pointer"
+        >
+          <p className="font-label-sm text-label-sm text-outline uppercase tracking-wider">{t('overview.metricConversion')}</p>
+          <p className="mt-0.5"><span className="font-headline-md text-[20px] font-bold text-on-surface">4.2%</span> <span className="text-[11px] font-semibold text-error">↓0.5%</span></p>
+        </button>
       </div>
     </div>
   );

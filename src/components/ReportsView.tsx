@@ -25,7 +25,7 @@ export const ReportsView: React.FC<ReportsViewProps> = ({ onTriggerAiAction }) =
             onClick={() =>
               onTriggerAiAction(
                 'AI Executive Forecast Report',
-                'Synthesize portfolio performance: $45.2M total active inventory across 156 properties, 4.2% conversion rate, and 24 new leads today. Generate Q3 forecast for Elite Realty Group.'
+                'Synthesize portfolio performance: $45.2M total active inventory across 156 properties, 4.2% conversion rate, and 24 new leads today. Generate Q3 forecast for 3R Connect.'
               )
             }
             className="px-md py-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-[#172e6e] transition-all active:scale-95 shadow-sm flex items-center gap-1.5 cursor-pointer"

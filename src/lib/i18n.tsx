@@ -12,12 +12,12 @@ const DICT: Record<string, { es: string; en: string }> = {
   'nav.reports': { es: 'Reportes', en: 'Reports' },
 
   // Sidebar
-  'sidebar.tagline': { es: 'Elite Realty Group', en: 'Elite Realty Group' },
+  'sidebar.tagline': { es: '3R Connect', en: '3R Connect' },
   'sidebar.aiInsight': { es: 'Asistente IA', en: 'AI Insight' },
   'sidebar.settings': { es: 'Configuración', en: 'Settings' },
   'sidebar.settingsAlert': { es: 'Configuración: preferencias, parámetros del modelo de IA y herramientas de integración de API.', en: 'Settings: Custom preferences, AI model parameters, and API integration tools.' },
   'sidebar.support': { es: 'Ayuda', en: 'Support' },
-  'sidebar.supportAlert': { es: 'Soporte: la línea de ayuda y concierge IA de Elite Realty está activa 24/7.', en: 'Support: 24/7 Elite Realty AI Concierge & Agent Helpline is active.' },
+  'sidebar.supportAlert': { es: 'Soporte: la línea de ayuda y concierge IA de 3R Connect está activa 24/7.', en: 'Support: 24/7 3R Connect AI Concierge & Agent Helpline is active.' },
   'sidebar.logout': { es: 'Cerrar sesión', en: 'Log out' },
 
   // Navbar
@@ -26,14 +26,14 @@ const DICT: Record<string, { es: string; en: string }> = {
   'navbar.notifications': { es: 'Notificaciones y resúmenes', en: 'Notifications & Briefs' },
   'navbar.aiToggle': { es: 'Abrir Sales Intelligence', en: 'Toggle Sales Intelligence Panel' },
   'navbar.profile': { es: 'Ver perfil del asesor', en: 'View Agent Profile' },
-  'navbar.profileAlert': { es: 'Perfil: Elena Rostova (Vicepresidenta Senior — Elite Realty Group)', en: 'Agent Profile: Elena Rostova (Senior Vice President - Elite Realty Group)' },
+  'navbar.profileAlert': { es: 'Perfil: Elena Rostova (Vicepresidenta Senior — 3R Connect)', en: 'Agent Profile: Elena Rostova (Senior Vice President - 3R Connect)' },
   'navbar.language': { es: 'Idioma', en: 'Language' },
 
   // Login
   'login.title': { es: 'Bienvenido de nuevo', en: 'Welcome back' },
   'login.subtitle': { es: 'Inicia sesión para continuar a tu panel', en: 'Sign in to continue to your dashboard' },
   'login.email': { es: 'Correo electrónico', en: 'Email' },
-  'login.emailPlaceholder': { es: 'tu@eliterealty.com', en: 'you@eliterealty.com' },
+  'login.emailPlaceholder': { es: 'tu@3rconnect.mx', en: 'you@3rconnect.mx' },
   'login.password': { es: 'Contraseña', en: 'Password' },
   'login.passwordPlaceholder': { es: '••••••••', en: '••••••••' },
   'login.remember': { es: 'Recordarme', en: 'Remember me' },
@@ -42,10 +42,10 @@ const DICT: Record<string, { es: string; en: string }> = {
   'login.demoNote': { es: 'Demo — cualquier correo y contraseña funcionan', en: 'Demo — any email and password work' },
 
   // Overview
-  'overview.title': { es: 'Resumen del Día', en: 'Morning Brief' },
+  'overview.title': { es: 'Brief Matutino', en: 'Morning Brief' },
   'overview.subtitle': { es: 'Esto es lo que está pasando hoy en tu portafolio inmobiliario.', en: "Here's what's happening with your real estate portfolio today." },
   'overview.exportReport': { es: 'Exportar Reporte', en: 'Export Report' },
-  'overview.exportAlert': { es: 'Exportando el Resumen del Día en PDF a tu escritorio...', en: 'Exporting Morning Brief PDF Report to your desktop...' },
+  'overview.exportAlert': { es: 'Exportando el Brief Matutino en PDF a tu escritorio...', en: 'Exporting Morning Brief PDF Report to your desktop...' },
   'overview.newListing': { es: 'Nueva Propiedad', en: 'New Listing' },
   'overview.metricLeads': { es: 'Leads Generados', en: 'Leads Generated' },
   'overview.vsYesterday': { es: 'vs. ayer', en: 'vs. yesterday' },
@@ -194,7 +194,7 @@ const DICT: Record<string, { es: string; en: string }> = {
   'newListing.publish': { es: 'Publicar Propiedad', en: 'Publish Listing' },
   'newListing.missingFieldsAlert': { es: 'Por favor ingresa al menos la dirección y el título de la propiedad primero.', en: 'Please enter at least the property address and title first.' },
   'newListing.defaultTitle': { es: 'Propiedad Residencial de Lujo', en: 'Luxury Residential Property' },
-  'newListing.defaultSeller': { es: 'Fideicomiso de Clientes Elite Realty', en: 'Elite Realty Client Trust' },
+  'newListing.defaultSeller': { es: 'Fideicomiso de Clientes 3R Connect', en: '3R Connect Client Trust' },
 
   // Lead Detail Modal
   'leadDetail.score': { es: 'Lead Score', en: 'Lead Score' },

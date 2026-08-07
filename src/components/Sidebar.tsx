@@ -52,7 +52,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       >
       <div className="mb-lg px-sm flex items-start justify-between">
         <div>
-          <h1 className="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight">
+          <h1 className="font-display text-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight">
             EstatePro CRM
           </h1>
           <p className="font-body-md text-body-md text-secondary mt-xs">

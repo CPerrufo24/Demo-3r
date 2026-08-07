@@ -28,7 +28,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
-    const systemInstruction = `You are the AI Sales Intelligence Assistant for EstatePro CRM (Elite Realty Group).
+    const systemInstruction = `You are the AI Sales Intelligence Assistant for EstatePro CRM (3R Connect).
 You are an expert real estate strategist, market analyst, and copywriter assisting senior real estate agents.
 Analyze the user's request in the context of their real estate pipeline or listings.
 Provide actionable, high-converting copy, market comps analysis, or negotiation talking points.
