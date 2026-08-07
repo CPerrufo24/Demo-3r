@@ -198,6 +198,7 @@ const DICT: Record<string, { es: string; en: string }> = {
 
   // Lead Detail Modal
   'leadDetail.score': { es: 'Lead Score', en: 'Lead Score' },
+  'leadDetail.scoreExplain': { es: 'Puntaje calculado con criterios fijos de calificación — nunca lo inventa la IA.', en: 'Score computed from fixed qualification criteria — never guessed by AI.' },
   'leadDetail.currentStage': { es: 'Etapa Actual', en: 'Current Stage' },
   'leadDetail.assignedAgent': { es: 'Asesor Asignado', en: 'Assigned Agent' },
   'leadDetail.targetBudget': { es: 'Presupuesto Objetivo', en: 'Target Budget' },

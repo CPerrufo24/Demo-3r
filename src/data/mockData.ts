@@ -309,7 +309,7 @@ export const MOCK_INSIGHTS: InsightCard[] = [
     icon: 'directions_car',
     theme: 'primary',
     targetView: 'pipeline',
-    aiPrompt: 'Generate a coordinated tour itinerary for Sarah Jenkins, Michael Chang, and Jonathan Sterling for Downtown listings.'
+    aiPrompt: 'Genera un itinerario de recorrido coordinado para Sarah Jenkins, Michael Chang y Jonathan Sterling en propiedades de Downtown.'
   },
   {
     id: 'insight-2',
@@ -319,7 +319,7 @@ export const MOCK_INSIGHTS: InsightCard[] = [
     icon: 'price_change',
     theme: 'error',
     targetView: 'listings',
-    aiPrompt: 'Analyze market comps for 124 Maple St and 88 Oak Ave and generate a professional price adjustment proposal for the sellers.'
+    aiPrompt: 'Analiza los comparables de mercado de 124 Maple St y 88 Oak Ave y genera una propuesta profesional de ajuste de precio para los vendedores.'
   },
   {
     id: 'insight-3',
@@ -329,7 +329,7 @@ export const MOCK_INSIGHTS: InsightCard[] = [
     icon: 'contact_mail',
     theme: 'tertiary',
     targetView: 'pipeline',
-    aiPrompt: 'Draft high-converting personalized WhatsApp follow-up messages for our 5 untouched weekend inquiry leads.'
+    aiPrompt: 'Redacta mensajes de seguimiento por WhatsApp, personalizados y persuasivos, para nuestros 5 leads del fin de semana que aún no han sido contactados.'
   },
   {
     id: 'insight-4',
@@ -339,7 +339,7 @@ export const MOCK_INSIGHTS: InsightCard[] = [
     icon: 'warning',
     theme: 'error',
     targetView: 'listings',
-    aiPrompt: 'Generate a retention strategy and market activity report email for Richard & Martha Vance regarding 124 Maple St.'
+    aiPrompt: 'Genera una estrategia de retención y un correo de reporte de actividad de mercado para Richard & Martha Vance sobre 124 Maple St.'
   }
 ];
 

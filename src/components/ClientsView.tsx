@@ -110,8 +110,8 @@ export const ClientsView: React.FC<ClientsViewProps> = ({ onTriggerAiAction }) =
           <button
             onClick={() =>
               onTriggerAiAction(
-                'AI Client Retention & Touchpoint Audit',
-                'Analyze our client directory and draft personalized touchpoint messages for clients who have not been contacted in over 48 hours.'
+                'Auditoría IA de Retención de Clientes',
+                'Analiza nuestro directorio de clientes y redacta mensajes de seguimiento personalizados para los clientes que no han sido contactados en más de 48 horas.'
               )
             }
             className="px-md py-sm rounded-lg border border-primary/40 text-primary bg-primary-fixed/30 font-label-md text-label-md hover:bg-primary-fixed/50 transition-all active:scale-95 flex items-center gap-1.5 cursor-pointer"
@@ -219,8 +219,8 @@ export const ClientsView: React.FC<ClientsViewProps> = ({ onTriggerAiAction }) =
                     <button
                       onClick={() =>
                         onTriggerAiAction(
-                          `WhatsApp Script: ${client.name}`,
-                          `Write a friendly, high-converting WhatsApp check-in for ${client.name} (${client.type}, interested in: "${client.interest}").`
+                          `Guion de WhatsApp: ${client.name}`,
+                          `Redacta un mensaje de seguimiento por WhatsApp, amigable y persuasivo, para ${client.name} (${client.type}, interesado en: "${client.interest}").`
                         )
                       }
                       className="px-2.5 py-1 bg-[#E0E7FF] text-[#3730A3] hover:bg-[#c7d2fe] rounded text-xs font-bold transition-colors cursor-pointer inline-flex items-center gap-1 shadow-2xs"
@@ -232,8 +232,8 @@ export const ClientsView: React.FC<ClientsViewProps> = ({ onTriggerAiAction }) =
                     <button
                       onClick={() =>
                         onTriggerAiAction(
-                          `Client Profile: ${client.name}`,
-                          `Analyze preferences and recommend top 3 matching properties or strategy for ${client.name}.`
+                          `Perfil de Cliente: ${client.name}`,
+                          `Analiza las preferencias de ${client.name} y recomienda las 3 propiedades que mejor calzan, o una estrategia de seguimiento.`
                         )
                       }
                       className="px-2.5 py-1 bg-surface border border-outline-variant hover:bg-surface-container rounded text-xs font-medium text-on-surface transition-colors cursor-pointer inline-flex items-center gap-1"

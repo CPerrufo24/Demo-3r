@@ -2,6 +2,7 @@ import React from 'react';
 import { Lead } from '../types';
 import { calcLeadScore, TIER_LABEL } from '../lib/leadScoring';
 import { SourceBadge } from './SourceBadge';
+import { LeadScoreRing } from './LeadScoreRing';
 import { useLanguage } from '../lib/i18n.tsx';
 
 interface LeadDetailModalProps {
@@ -66,9 +67,11 @@ export const LeadDetailModal: React.FC<LeadDetailModalProps> = ({
                 {TIER_LABEL[tier]}
               </span>
             </div>
-            <div className="flex items-baseline gap-2 mb-3">
-              <span className="text-4xl font-bold text-on-surface">{score}</span>
-              <span className="text-sm text-secondary font-semibold">/ 100</span>
+            <div className="flex items-center gap-4 mb-3">
+              <LeadScoreRing score={score} tier={tier} />
+              <p className="text-xs text-on-surface-variant leading-snug flex-1">
+                {t('leadDetail.scoreExplain')}
+              </p>
             </div>
             <ul className="space-y-1.5 mb-3">
               {reasons.map((reason) => (
@@ -137,8 +140,8 @@ export const LeadDetailModal: React.FC<LeadDetailModalProps> = ({
               <button
                 onClick={() => {
                   onTriggerAiAction(
-                    `Strategy Brief: ${lead.name}`,
-                    `Generate a full negotiation strategy, suggested properties matching budget ${lead.budget}, and talking points for ${lead.name} regarding "${lead.inquiry}".`
+                    `Estrategia: ${lead.name}`,
+                    `Genera una estrategia de negociación completa, propiedades sugeridas dentro del presupuesto ${lead.budget}, y puntos de conversación para ${lead.name} respecto a "${lead.inquiry}".`
                   );
                   onClose();
                 }}
@@ -157,8 +160,8 @@ export const LeadDetailModal: React.FC<LeadDetailModalProps> = ({
           <button
             onClick={() => {
               onTriggerAiAction(
-                `WhatsApp Follow-up: ${lead.name}`,
-                `Draft a personalized WhatsApp follow-up for ${lead.name} regarding ${lead.inquiry}.`
+                `Seguimiento WhatsApp: ${lead.name}`,
+                `Redacta un mensaje de seguimiento personalizado por WhatsApp para ${lead.name} sobre ${lead.inquiry}.`
               );
               onClose();
             }}

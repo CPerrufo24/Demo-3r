@@ -209,8 +209,8 @@ export const PipelineView: React.FC<PipelineViewProps> = ({
                           onClick={(e) => {
                             e.stopPropagation();
                             onTriggerAiAction(
-                              `Follow-up with ${lead.name}`,
-                              `Generate a personalized follow-up message and property briefing for ${lead.name} regarding their inquiry: "${lead.inquiry}" with budget ${lead.budget}.`
+                              `Seguimiento con ${lead.name}`,
+                              `Genera un mensaje de seguimiento personalizado y un briefing de propiedad para ${lead.name} respecto a su solicitud: "${lead.inquiry}" con presupuesto ${lead.budget}.`
                             );
                           }}
                           className="p-1 text-primary hover:bg-primary-fixed rounded"

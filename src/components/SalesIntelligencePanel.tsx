@@ -163,7 +163,7 @@ export const SalesIntelligencePanel: React.FC<SalesIntelligencePanelProps> = ({
 
         {/* Action 1 */}
         <button
-          onClick={() => handleSendQuery('Generate WhatsApp Follow-up for Sarah Jenkins')}
+          onClick={() => handleSendQuery('Genera un seguimiento de WhatsApp para Sarah Jenkins')}
           className="bg-surface-container-lowest rounded-lg border border-outline-variant p-md flex items-center justify-between shadow-xs hover:shadow-md transition-all group text-left w-full cursor-pointer shrink-0 hover:border-primary/40"
         >
           <div className="flex items-center gap-md min-w-0">
@@ -188,7 +188,7 @@ export const SalesIntelligencePanel: React.FC<SalesIntelligencePanelProps> = ({
 
         {/* Action 2 */}
         <button
-          onClick={() => handleSendQuery('Prepare Visit Briefing for 124 Maple St.')}
+          onClick={() => handleSendQuery('Prepara el briefing de visita para 124 Maple St.')}
           className="bg-surface-container-lowest rounded-lg border border-outline-variant p-md flex items-center justify-between shadow-xs hover:shadow-md transition-all group text-left w-full cursor-pointer shrink-0 hover:border-primary/40"
         >
           <div className="flex items-center gap-md min-w-0">
@@ -213,7 +213,7 @@ export const SalesIntelligencePanel: React.FC<SalesIntelligencePanelProps> = ({
 
         {/* Action 3 */}
         <button
-          onClick={() => handleSendQuery('Compare Market Comps for 88 Oak Ave')}
+          onClick={() => handleSendQuery('Compara los comparables de mercado para 88 Oak Ave')}
           className="bg-surface-container-lowest rounded-lg border border-outline-variant p-md flex items-center justify-between shadow-xs hover:shadow-md transition-all group text-left w-full cursor-pointer shrink-0 hover:border-primary/40"
         >
           <div className="flex items-center gap-md min-w-0">
@@ -238,7 +238,7 @@ export const SalesIntelligencePanel: React.FC<SalesIntelligencePanelProps> = ({
 
         {/* Action 4 */}
         <button
-          onClick={() => handleSendQuery('Draft Property Description for luxury downtown penthouse')}
+          onClick={() => handleSendQuery('Redacta la descripción de propiedad para un penthouse de lujo en Downtown')}
           className="bg-surface-container-lowest rounded-lg border border-outline-variant p-md flex items-center justify-between shadow-xs hover:shadow-md transition-all group text-left w-full cursor-pointer shrink-0 hover:border-primary/40"
         >
           <div className="flex items-center gap-md min-w-0">
@@ -362,7 +362,7 @@ export const SalesIntelligencePanel: React.FC<SalesIntelligencePanelProps> = ({
         <div className="flex justify-center gap-md mt-sm">
           <button
             type="button"
-            onClick={() => handleSendQuery('Generate full executive portfolio report for today')}
+            onClick={() => handleSendQuery('Genera el reporte ejecutivo completo del portafolio de hoy')}
             className="text-on-surface-variant font-label-sm text-xs hover:text-primary transition-colors cursor-pointer flex items-center gap-1"
           >
             <span className="material-symbols-outlined text-[14px]">summarize</span>
@@ -370,7 +370,7 @@ export const SalesIntelligencePanel: React.FC<SalesIntelligencePanelProps> = ({
           </button>
           <button
             type="button"
-            onClick={() => handleSendQuery('Summarize Active Pipeline opportunities and bottlenecks')}
+            onClick={() => handleSendQuery('Resume las oportunidades activas del pipeline y sus cuellos de botella')}
             className="text-on-surface-variant font-label-sm text-xs hover:text-primary transition-colors cursor-pointer flex items-center gap-1"
           >
             <span className="material-symbols-outlined text-[14px]">insights</span>

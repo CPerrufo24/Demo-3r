@@ -68,8 +68,8 @@ export const ListingsView: React.FC<ListingsViewProps> = ({
           <button
             onClick={() =>
               onTriggerAiAction(
-                'Portfolio Valuation & Comps Audit',
-                'Analyze our 156 active listings and identify any properties with high days on market that require immediate pricing adjustments or marketing boosts.'
+                'Auditoría de Valuación y Comparables',
+                'Analiza nuestras 156 propiedades activas e identifica cuáles tienen demasiados días en el mercado y requieren un ajuste de precio inmediato o un impulso de marketing.'
               )
             }
             className="px-md py-sm rounded-lg border border-primary/40 text-primary bg-primary-fixed/30 font-label-md text-label-md hover:bg-primary-fixed/50 transition-all active:scale-95 flex items-center gap-1.5 cursor-pointer"
@@ -256,8 +256,8 @@ export const ListingsView: React.FC<ListingsViewProps> = ({
                     <button
                       onClick={() =>
                         onTriggerAiAction(
-                          `Strategic Review: ${item.address}`,
-                          `Analyze ${item.address} (${item.title}, ${item.bedrooms} bed, ${item.sqft} sqft) listed at $${item.price.toLocaleString()} with ${item.daysOnMarket} days on market. Generate marketing action plan and seller briefing.`
+                          `Revisión Estratégica: ${item.address}`,
+                          `Analiza ${item.address} (${item.title}, ${item.bedrooms} recámaras, ${item.sqft} pies²) listada en $${item.price.toLocaleString()} con ${item.daysOnMarket} días en el mercado. Genera un plan de acción de marketing y un briefing para el vendedor.`
                         )
                       }
                       className="px-2.5 py-1 bg-surface-container-lowest border border-outline-variant text-on-surface rounded font-medium hover:bg-surface-container-low transition-colors cursor-pointer"
@@ -280,8 +280,8 @@ export const ListingsView: React.FC<ListingsViewProps> = ({
                 <button
                   onClick={() =>
                     onTriggerAiAction(
-                      `Listing Copy: ${item.address}`,
-                      `Write an MLS listing description and luxury Instagram caption for ${item.address}: ${item.title}, $${item.price.toLocaleString()}.`
+                      `Copy de Publicación: ${item.address}`,
+                      `Redacta una descripción de listado MLS y un caption de Instagram estilo lujo para ${item.address}: ${item.title}, $${item.price.toLocaleString()}.`
                     )
                   }
                   className="text-primary hover:text-primary-container font-semibold flex items-center gap-1 cursor-pointer"

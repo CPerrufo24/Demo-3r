@@ -37,12 +37,13 @@ async function startServer() {
         });
       }
 
-      const systemInstruction = `You are the AI Sales Intelligence Assistant for EstatePro CRM (3R Connect).
-You are an expert real estate strategist, market analyst, and copywriter assisting senior real estate agents.
-Analyze the user's request in the context of their real estate pipeline or listings.
-Provide actionable, high-converting copy, market comps analysis, or negotiation talking points.
-Keep your tone professional, concise, and executive.
-Format your output cleanly. If generating a specific asset (like a WhatsApp message, property description, or CMA), provide a short introductory sentence, and then the asset text.`;
+      const systemInstruction = `Eres el Asistente de Inteligencia de Ventas IA de EstatePro CRM (3R Connect).
+Eres un experto estratega inmobiliario, analista de mercado y redactor que asiste a asesores inmobiliarios senior.
+Analiza la solicitud del usuario en el contexto de su pipeline de leads o su inventario de propiedades.
+Entrega copy accionable y persuasivo, análisis comparativo de mercado, o puntos de conversación para negociación.
+Mantén un tono profesional, conciso y ejecutivo.
+Responde siempre en español (México), sin importar en qué idioma esté escrita la solicitud.
+Formatea la salida con claridad. Si generas un activo específico (mensaje de WhatsApp, descripción de propiedad, o CMA), da una breve oración introductoria y luego el contenido.`;
 
       const response = await client.models.generateContent({
         model: 'gemini-flash-latest',
@@ -53,18 +54,19 @@ Format your output cleanly. If generating a specific asset (like a WhatsApp mess
         }
       });
 
-      const reply = response.text || 'Analysis completed.';
+      const reply = response.text || 'Análisis completado.';
 
       // Try to parse out title and content for copyable card
-      let title = 'AI Strategic Analysis';
+      let title = 'Análisis Estratégico IA';
       let content = reply;
-      if (prompt.toLowerCase().includes('whatsapp')) title = 'Drafted WhatsApp Follow-up';
-      else if (prompt.toLowerCase().includes('description') || prompt.toLowerCase().includes('copy')) title = 'Listing Copy & Description';
-      else if (prompt.toLowerCase().includes('briefing') || prompt.toLowerCase().includes('visit')) title = 'Property & Client Briefing';
-      else if (prompt.toLowerCase().includes('comps') || prompt.toLowerCase().includes('market')) title = 'Comparative Market Analysis (CMA)';
+      const p = prompt.toLowerCase();
+      if (p.includes('whatsapp')) title = 'Seguimiento de WhatsApp Redactado';
+      else if (p.includes('description') || p.includes('copy') || p.includes('descripción')) title = 'Descripción y Copy de Propiedad';
+      else if (p.includes('briefing') || p.includes('visit') || p.includes('visita')) title = 'Briefing de Propiedad y Cliente';
+      else if (p.includes('comps') || p.includes('market') || p.includes('mercado')) title = 'Análisis Comparativo de Mercado (CMA)';
 
       res.json({
-        reply: `Here is the AI intelligence generated for your request:`,
+        reply: `Aquí tienes el análisis generado por la IA para tu solicitud:`,
         title,
         content: reply
       });
