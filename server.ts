@@ -45,7 +45,7 @@ Keep your tone professional, concise, and executive.
 Format your output cleanly. If generating a specific asset (like a WhatsApp message, property description, or CMA), provide a short introductory sentence, and then the asset text.`;
 
       const response = await client.models.generateContent({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-flash-latest',
         contents: `Context: ${context || 'General Real Estate'}\nRequest: ${prompt}`,
         config: {
           systemInstruction,
