@@ -70,6 +70,16 @@ En orden sugerido de prioridad (de "prueba de concepto" a "producto real"):
 6. **Publicar en portales** — botón de "Publicar en EasyBroker / MercadoLibre" desde Propiedades (simulado primero, real después si EasyBroker lo permite).
 7. **Traducción completa** — las respuestas de IA y los datos de ejemplo hoy solo están en español; si se necesita inglés real para otro cliente, falta poblar esas cadenas.
 
+## Deploy en Vercel (demo en vivo para la reunión)
+
+- Repo: `CPerrufo24/Demo-3r` (push por SSH usando el alias `github-personal`, no `github.com`).
+- Endpoint de IA migrado a función serverless (`api/ai.ts`, `api/health.ts`) — Express (`server.ts`) queda solo para dev local.
+- **Variables de entorno a configurar en Vercel** (Project Settings → Environment Variables):
+  - `GEMINI_API_KEY` — tu key real, para que la IA responda en vivo durante la reunión.
+  - `DEMO_USER` = `3rconnect`
+  - `DEMO_PASSWORD` = `Demo2026!`
+- El plan Hobby de Vercel no tiene password protection nativo (es de Pro), así que se agregó `middleware.ts` con HTTP Basic Auth: cualquier visita a la URL pide usuario/contraseña con el prompt nativo del navegador, usando `DEMO_USER`/`DEMO_PASSWORD`. Solo hay que decirle a 3R Connect esas credenciales cuando compartas el link.
+
 ## Mensaje clave para la reunión
 
 No prometer "reemplazo total de HubSpot" listo hoy — eso se cae con la primera pregunta técnica sobre sync de email o roles. El pitch correcto es: *"esta es la capa de inteligencia y el punto único de trabajo; la conexión real con tus sistemas actuales es la siguiente fase, y aquí está el plan."*
