@@ -32,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       </button>
 
       {/* Search Bar */}
-      <div className="flex-1 min-w-0 max-w-md">
+      <div className="flex-1 min-w-0 max-w-[28rem]">
         <div className="relative flex items-center">
           <span className="material-symbols-outlined absolute left-sm text-outline font-label-md text-label-md">
             search

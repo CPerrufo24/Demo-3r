@@ -54,7 +54,17 @@
   --spacing-xl: 2rem;
   --spacing-gutter: 1.25rem;
 
-  /* Max-width scale — powers max-w-*. */
+  /* Max-width scale — powers max-w-*.
+     NOTE: Tailwind v4 resolves max-w-{key} by checking --max-width-{key},
+     then --spacing-{key}, THEN --container-{key} — spacing wins first. Our
+     custom --spacing-xs/sm/md/lg/xl above (named, not numeric) therefore
+     shadow the built-in max-w-{xs,sm,md,lg,xl} scale (e.g. max-w-sm
+     resolved to var(--spacing-sm), 0.75rem, instead of 24rem), collapsing
+     any box using those exact class names to word-wrap width. Adding
+     --container-* entries here does NOT fix it (spacing still wins) — the
+     actual fix is to avoid max-w-{xs,sm,md,lg,xl} at call sites and use
+     an arbitrary value instead, e.g. max-w-[24rem]. max-w-2xl/3xl/etc. are
+     unaffected since we don't define spacing keys with those names. */
   --container-container-max: 1440px;
 
   /* Typography scale — powers text-*. Material-3-style role names

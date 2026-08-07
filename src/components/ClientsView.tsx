@@ -207,7 +207,7 @@ export const ClientsView: React.FC<ClientsViewProps> = ({ onTriggerAiAction }) =
                     <p className="text-xs font-medium text-secondary">{client.status}</p>
                   </td>
                   <td className="p-4">
-                    <p className="text-xs text-on-surface font-medium max-w-xs">{client.interest}</p>
+                    <p className="text-xs text-on-surface font-medium max-w-[20rem]">{client.interest}</p>
                   </td>
                   <td className="p-4">
                     <span className="text-xs font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">

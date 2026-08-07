@@ -65,7 +65,7 @@ export const ImportCrmModal: React.FC<ImportCrmModalProps> = ({ isOpen, onClose,
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-on-surface/50 backdrop-blur-xs p-4 animate-fadeIn">
-      <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-2xl max-w-lg w-full p-6 space-y-5">
+      <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-2xl max-w-[32rem] w-full p-6 space-y-5">
         <div className="flex justify-between items-center border-b border-outline-variant/60 pb-4">
           <h3 className="font-headline-md text-[19px] font-bold text-on-surface flex items-center gap-2">
             <span className="material-symbols-outlined text-primary text-[20px]">sync_alt</span>
@@ -156,7 +156,7 @@ export const ImportCrmModal: React.FC<ImportCrmModalProps> = ({ isOpen, onClose,
             </div>
             <div>
               <h4 className="text-base font-bold text-on-surface">{t('importCrm.step3Title')}</h4>
-              <p className="text-xs text-secondary mt-1 leading-relaxed max-w-sm mx-auto">
+              <p className="text-xs text-secondary mt-1 leading-relaxed max-w-[24rem] mx-auto">
                 {t('importCrm.step3Desc', platformLabel)}
               </p>
             </div>

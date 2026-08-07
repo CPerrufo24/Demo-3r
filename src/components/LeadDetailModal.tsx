@@ -31,7 +31,7 @@ export const LeadDetailModal: React.FC<LeadDetailModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-on-surface/50 backdrop-blur-xs p-4 animate-fadeIn">
-      <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-2xl max-w-lg w-full p-6 space-y-5">
+      <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-2xl max-w-[32rem] w-full p-6 space-y-5">
         <div className="flex justify-between items-start border-b border-outline-variant/60 pb-4">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-lg">
