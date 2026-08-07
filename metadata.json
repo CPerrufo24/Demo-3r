@@ -1,0 +1,6 @@
+{
+  "name": "EstatePro CRM",
+  "description": "Elite Realty Group real estate CRM with AI Sales Intelligence command center and executive morning brief dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

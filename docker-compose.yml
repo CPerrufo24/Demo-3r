@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: estatepro-crm-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-estatepro}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-estatepro_demo}
+      POSTGRES_DB: ${POSTGRES_DB:-estatepro_crm}
+    ports:
+      - '${POSTGRES_PORT:-5432}:5432'
+    volumes:
+      - estatepro_db_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER:-estatepro} -d ${POSTGRES_DB:-estatepro_crm}']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  estatepro_db_data:
